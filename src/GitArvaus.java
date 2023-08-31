@@ -2,15 +2,24 @@ import java.util.Scanner;
 public class GitArvaus {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Arvaa nimi? 
 
 		Scanner in = new Scanner(System.in);
 		
 		String vastaus = "";
+		String nimi;
 		
+		do
+		{
 		System.out.println ("Arvaa nimi?");
 		vastaus = in.nextLine();
-		System.out.println (vastaus);
+		nimi = vastaus;
+		System.out.println (nimi);
+		
+		} while (!nimi.equals("Laura"));
+		{
+			System.out.println ("Onnittelut, arvasit oikein!");
+		}
 		
 	}
 
