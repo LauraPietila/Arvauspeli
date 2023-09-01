@@ -1,25 +1,46 @@
 import java.util.Scanner;
+
+
 public class GitArvaus {
 
 	public static void main(String[] args) {
 		// Arvaa nimi? 
+		
 
 		Scanner in = new Scanner(System.in);
 		
 		String vastaus = "";
-		String nimi;
+		
+		int kysymys =0;
+		
 		
 		do
 		{
-		System.out.println ("Arvaa nimi?");
+		System.out.println ("Arvaa nimi? Kirjota stop, jos haluat lopettaa.");
 		vastaus = in.nextLine();
-		nimi = vastaus;
-		System.out.println (nimi);
+		kysymys +=1;
 		
-		} while (!nimi.equals("Laura"));
+		System.out.println (vastaus);
+		
+		if (vastaus.equals("Laura"))
 		{
-			System.out.println ("Onnittelut, arvasit oikein!");
+			System.out.println("Onnittelut, arvasit oikein!");
 		}
+		
+		if (vastaus.equals("stop"))
+		{
+			kysymys -=1;
+			System.out.println("Kiitos pelista!");
+			break;
+		}
+		
+		} while (!vastaus.equals("Laura"));
+
+		{
+			
+			System.out.println ("Arvasit " + kysymys + " kertaa!");
+		}
+		
 		
 	}
 
